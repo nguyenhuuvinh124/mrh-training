@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích tam giác</title>
+</head>
+<body>
+    <h1>Tính diện tích tam giác</h1>
+    <p>Độ dài ba cạnh của tam giác là: 5, 6, 7</p>
+    <p id="result"></p>
+</body>
+<script>
+     // Độ dài ba cạnh của tam giác
+      const a = 5;
+      const b = 6;
+      const c = 7;
+
+      // Tính nửa chu vi của tam giác
+      const s = (a + b + c) / 2;
+
+      // Tính diện tích của tam giác
+      const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      document.getElementById("result").innerText = "Diện tích của tam giác là: " + area;
+</script>
+</html>
