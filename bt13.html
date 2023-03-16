@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tạo một biến sử dụng tên do người dùng đặt</title>
+</head>
+<body>
+      <h1>Tạo một biến sử dụng tên do người dùng đặt</h1>
+    <p>Nhập tên biến:</p>
+    <input type="text" id="variableName">
+    <br><br>
+    <p>Nhập giá trị của biến:</p>
+    <input type="text" id="variableValue">
+    <br><br>
+    <button onclick="createVariable()">Tạo biến</button>
+</body>
+<script>
+    function createVariable() {
+        var variableName = document.getElementById("variableName").value;
+        var variableValue = document.getElementById("variableValue").value;
+        window[variableName] = variableValue;
+
+        // Hiển thị giá trị của biến
+        alert("Giá trị của biến " + variableName + " là: " + window[variableName]);
+      }
+</script>
+</html>
