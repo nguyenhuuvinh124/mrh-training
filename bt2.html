@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị nội dung cửa sổ hiện tại</title>
+</head>
+<body>
+   <div id="current-window-content">Nội dung phần tử này sẽ được thay thế bằng nội dung của cửa sổ hiện tại.</div>
+</body>
+<script>
+		// Lấy nội dung cửa sổ hiện tại
+		const windowContent = window.document.documentElement.outerHTML;
+
+		// Thêm nội dung vào phần tử HTML
+		document.getElementById("current-window-content").innerHTML = windowContent;
+</script>
+
+</html>
