@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số bội số của 3 hoặc 7</title>
+</head>
+<body>
+    <h1>Kiểm tra số bội số của 3 hoặc 7</h1>
+	<label for="number">Nhập số dương:</label>
+	<input type="number" id="number">
+	<button onclick="checkMultiple()">Kiểm tra</button>
+	<p id="result"></p>
+</body>
+<script>
+   function checkMultiple() {
+			let number = parseInt(document.getElementById("number").value);
+			if (number % 3 == 0 || number % 7 == 0) {
+				document.getElementById("result").innerHTML = number + " là bội số của 3 hoặc 7";
+			} else {
+				document.getElementById("result").innerHTML = number + " không phải là bội số của 3 hoặc 7";
+			}
+		} 
+</script>
+</html>
