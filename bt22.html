@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Character</title>
+</head>
+<body>
+    <input type="text" id="inputString" placeholder="Enter a string">
+	<input type="text" id="inputIndex" placeholder="Enter an index">
+	<button type="button" onclick="deleteCharacter()">Delete Character</button>
+	<p id="result"></p>
+</body>
+<script>
+    function deleteCharacter() {
+			let inputString = document.getElementById("inputString").value;
+			let inputIndex = parseInt(document.getElementById("inputIndex").value);
+			let newString = inputString.slice(0, inputIndex) + inputString.slice(inputIndex + 1);
+			document.getElementById("result").innerHTML = newString;
+		}
+</script>
+</html>
