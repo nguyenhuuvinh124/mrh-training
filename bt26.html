@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm ký tự vào chuỗi</title>
+</head>
+<body>
+    <label for="inputString">Nhập chuỗi:</label>
+    <input type="text" id="inputString">
+    <br><br>
+    <button onclick="addCharacters()">Thêm ký tự</button>
+    <br><br>
+    <label for="outputString">Kết quả:</label>
+    <input type="text" id="outputString" readonly>
+</body>
+<script>
+     function addCharacters() {
+        var inputString = document.getElementById("inputString").value;
+        if (inputString.length < 3) {
+          alert("Chuỗi phải có độ dài từ 3 trở lên!");
+        } else {
+          var lastThreeCharacters = inputString.slice(-3);
+          var newString = lastThreeCharacters + inputString + lastThreeCharacters;
+          document.getElementById("outputString").value = newString;
+        }
+      }
+</script>
+</html>
