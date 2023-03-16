@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tính phép nhân và chia hai số</title>
+</head>
+<body>
+     <h1>Tính phép nhân và chia hai số</h1>
+    <form>
+      <label for="num1">Nhập số thứ nhất:</label>
+      <input type="number" id="num1"><br>
+
+      <label for="num2">Nhập số thứ hai:</label>
+      <input type="number" id="num2"><br>
+
+      <button type="button" onclick="multiply()">Nhân</button>
+      <button type="button" onclick="divide()">Chia</button><br><br>
+
+      <label for="result">Kết quả:</label>
+      <input type="number" id="result" readonly>
+    </form>
+</body>
+<script>
+    function multiply() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 * num2;
+      document.getElementById("result").value = result;
+    }
+
+    function divide() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var result = num1 / num2;
+
+      // Xử lý trường hợp số chia bằng 0
+      if (num2 === 0) {
+        alert("Không thể chia cho số 0");
+        return;
+      }
+
+      document.getElementById("result").value = result;
+    }
+  </script>
+</html>
