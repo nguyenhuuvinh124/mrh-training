@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xoay chuỗi 'w3resource'Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+        // Lấy chuỗi ban đầu
+		let str = "w3resource";
+
+		// Xoay chuỗi
+		str = str[str.length - 1] + str.substring(0, str.length - 1);
+
+		// Hiển thị chuỗi đã xoay lên trang web
+		document.getElementById("demo").innerText = str;
+</script>
+</html>
