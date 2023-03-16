@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Integer</title>
+</head>
+<body>
+    <input type="text" id="inputNumber" placeholder="Enter an integer">
+	<button type="button" onclick="checkInteger()">Check</button>
+	<p id="result"></p>
+</body>
+<script>
+    function checkInteger() {
+			let number = parseInt(document.getElementById("inputNumber").value);
+			if ((number >= 20 && number <= 100) || number === 400) {
+				document.getElementById("result").innerHTML = number + " is in the range of 20 to 100 or 400.";
+			} else {
+				document.getElementById("result").innerHTML = number + " is not in the specified range.";
+			}
+		}
+</script>
+</html>
