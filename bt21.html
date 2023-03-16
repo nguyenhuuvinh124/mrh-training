@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Prefix</title>
+</head>
+<body>
+	<input type="text" id="inputString" placeholder="Enter a string">
+	<button type="button" onclick="addPrefix()">Add Prefix</button>
+	<p id="result"></p>
+</body>
+<script>
+    	function addPrefix() {
+			let inputString = document.getElementById("inputString").value;
+			if (inputString.startsWith("Py")) {
+				document.getElementById("result").innerHTML = inputString;
+			} else {
+				let newString = "Py" + inputString;
+				document.getElementById("result").innerHTML = newString;
+			}
+		}
+</script>
+</html>
