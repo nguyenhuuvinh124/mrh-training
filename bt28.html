@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên</title>
+</head>
+<body>
+    <label for="number1">Nhập số nguyên thứ nhất:</label>
+    <input type="text" id="number1">
+    <br><br>
+    <label for="number2">Nhập số nguyên thứ hai:</label>
+    <input type="text" id="number2">
+    <br><br>
+    <button onclick="checkNumbers()">Kiểm tra số nguyên</button>
+    <br><br>
+    <label for="outputString">Kết quả:</label>
+    <input type="text" id="outputString" readonly>
+</body>
+<script>
+     function checkNumbers() {
+        var number1 = parseInt(document.getElementById("number1").value);
+        var number2 = parseInt(document.getElementById("number2").value);
+        var result = (number1 >= 50 && number1 <= 99) || (number2 >= 50 && number2 <= 99);
+        document.getElementById("outputString").value = result;
+      }
+</script>
+</html>
