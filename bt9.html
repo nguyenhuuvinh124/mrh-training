@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tính số ngày còn lại cho đến Giáng sinh tới</title>
+</head>
+<body>
+    <p>Số ngày còn lại cho đến Giáng sinh tới: <span id="countdown"></span></p>
+</body>
+<script>
+     // Tính số ngày còn lại cho đến Giáng sinh tới
+     //1000: 1 giây = 1000 mili giây. Do đó, để chuyển đổi thời gian tính bằng mili giây sang giây, chúng ta chia cho 1000.
+    //60: 1 phút = 60 giây. Do đó, để chuyển đổi thời gian tính bằng giây sang phút, chúng ta chia cho 60.
+    //60: 1 giờ = 60 phút. Do đó, để chuyển đổi thời gian tính bằng phút sang giờ, chúng ta cũng chia cho 60.
+    //24: 1 ngày = 24 giờ. Do đó, để chuyển đổi thời gian tính bằng giờ sang ngày, chúng ta chia cho 24.
+      var christmas = new Date("December 25, 2023").getTime();
+      var now = new Date().getTime();
+      var daysLeft = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
+
+      // Hiển thị số ngày còn lại
+      document.getElementById("countdown").innerHTML = daysLeft;
+</script>
+</html>
