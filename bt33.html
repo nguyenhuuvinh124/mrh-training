@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số trong phạm vi</title>
+</head>
+<body>
+    <h1>Kiểm tra số trong phạm vi</h1>
+	<label>Nhập số thứ nhất:</label>
+	<input type="text" id="num1"><br><br>
+	<label>Nhập số thứ hai:</label>
+	<input type="text" id="num2"><br><br>
+	<button onclick="kiemTra()">Kiểm tra</button>
+</body>
+<script>
+    function kiemTra() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+
+			if ((num1 >= 40 && num1 <= 60) || (num1 >= 70 && num1 <= 100)) {
+				if ((num2 >= 40 && num2 <= 60) || (num2 >= 70 && num2 <= 100)) {
+					alert("Cả hai số đều nằm trong phạm vi!");
+				} else {
+					alert("Số thứ hai không nằm trong phạm vi!");
+				}
+			} else {
+				alert("Số thứ nhất không nằm trong phạm vi!");
+			}
+		}
+</script>
+</html>
