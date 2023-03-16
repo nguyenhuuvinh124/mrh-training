@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Absolute Difference</title>
+</head>
+<body>
+  <label for="number">Enter a number:</label>
+  <input type="number" id="number">
+  <button onclick="calculateAndDisplay()">Calculate</button>
+  <p>The absolute difference is: <span id="result"></span></p>
+</body>
+<script>
+      function calculateAbsoluteDifference(num) {
+      let absoluteDifference = Math.abs(num - 19);
+      if (num > 19) {
+        return absoluteDifference * 3;
+      } else {
+        return absoluteDifference;
+      }
+    }
+    function calculateAndDisplay() {
+      let num = document.getElementById("number").value;
+      let result = calculateAbsoluteDifference(num);
+      document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>
