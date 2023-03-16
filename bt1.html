@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <p id="result">TODAY</p>
+</body>
+<script>
+var result = document.querySelector("#result");
+// Lấy thời gian hiện tại
+var now = new Date();
+
+// Lấy thông tin ngày hiện tại
+var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var dayOfWeek = daysOfWeek[now.getDay()];
+
+// Lấy thông tin giờ hiện tại
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+
+// Xác định định dạng giờ
+var timeFormat = 'AM';
+if (hours >= 12) {
+  timeFormat = 'PM';
+  hours = hours - 12;
+}
+if (hours == 0) {
+  hours = 12;
+}
+// Hiển thị ngày và giờ
+var currentTimeString = 'Current time is : ' + hours + ' ' + timeFormat + ' : ' + minutes + ' : ' + seconds;
+result.innerHTML= 'Today is : ' + dayOfWeek + '<br/>' + currentTimeString;
+</script>
+</html>
