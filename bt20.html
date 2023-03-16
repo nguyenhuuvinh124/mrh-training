@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Integers</title>
+</head>
+<body>
+    <input type="text" id="inputNumber1" placeholder="Enter an integer">
+	<input type="text" id="inputNumber2" placeholder="Enter another integer">
+	<button type="button" onclick="checkIntegers()">Check</button>
+	<p id="result"></p>
+</body>
+<script>
+   	function checkIntegers() {
+			let number1 = parseInt(document.getElementById("inputNumber1").value);
+			let number2 = parseInt(document.getElementById("inputNumber2").value);
+			if (number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0) {
+				document.getElementById("result").innerHTML = "One of the integers is positive and one is negative.";
+			} else {
+				document.getElementById("result").innerHTML = "The integers do not meet the specified criteria.";
+			}
+		}
+</script>
+</html>
