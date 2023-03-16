@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra chuỗi</title>
+</head>
+<body>
+    <label for="inputString">Nhập chuỗi:</label>
+    <input type="text" id="inputString">
+    <br><br>
+    <button onclick="checkString()">Kiểm tra chuỗi</button>
+    <br><br>
+    <label for="outputString">Kết quả:</label>
+    <input type="text" id="outputString" readonly>
+</body>
+<script>
+     function checkString() {
+        var inputString = document.getElementById("inputString").value;
+        var result = inputString.startsWith("Java");
+        if (result) {
+          document.getElementById("outputString").value = "Chuỗi bắt đầu bằng 'Java'";
+        } else {
+          document.getElementById("outputString").value = "Chuỗi không bắt đầu bằng 'Java'";
+        }
+      }
+</script>
+</html>
