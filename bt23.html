@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Characters</title>
+</head>
+<body>
+    <input type="text" id="inputString" placeholder="Enter a string">
+	<button type="button" onclick="swapCharacters()">Swap Characters</button>
+	<p id="result"></p>
+</body>
+<script>
+    function swapCharacters() {
+			let inputString = document.getElementById("inputString").value;
+			let stringLength = inputString.length;
+			if (stringLength <= 1) {
+				document.getElementById("result").innerHTML = "The string must be longer than 1 character";
+			} else {
+				let newString = inputString.charAt(stringLength - 1) + inputString.slice(1, stringLength - 1) + inputString.charAt(0);
+				document.getElementById("result").innerHTML = newString;
+			}
+		}
+</script>
+</html>
