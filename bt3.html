@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị ngày hiện tại</title>
+</head>
+<body>
+    <p>Ngày hiện tại là: <span id="current-date"></span></p>
+</body>
+<script>
+// Tạo đối tượng Date với thời gian hiện tại
+const today = new Date();
+
+// Lấy ngày, tháng, năm từ đối tượng Date
+const day = today.getDate();
+const month = today.getMonth() + 1;
+const year = today.getFullYear();
+
+// Định dạng ngày tháng năm thành chuỗi dd-mm-yyyy
+const formattedDate = `${day}-${month}-${year}`;
+
+// Lấy phần tử HTML với id là "current-date"
+const currentDateElement = document.getElementById("current-date");
+
+// Đặt nội dung của phần tử HTML đó bằng ngày hiện tại
+currentDateElement.innerHTML = formattedDate;
+</script>
+</html>
